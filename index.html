@@ -1,59 +1,74 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Mehedi Dev Journey - Professional Web Developer Portfolio">
-    <meta name="keywords" content="developer, portfolio, web development, javascript">
-    <title>Mehedi Dev Journey - আমার পোর্টফোলিও</title>
+    <meta name="description" content="Professional Web Developer Portfolio - Build stunning web applications with modern technologies">
+    <meta name="keywords" content="web developer, portfolio, javascript, html, css, web development">
+    <meta name="author" content="Mehedi Hasan">
+    <meta name="theme-color" content="#667eea">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Mehedi Dev - Web Developer Portfolio">
+    <meta property="og:description" content="Professional Web Developer creating modern, responsive web applications">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://MehediDevJourney.github.io">
+    <meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630'%3E%3Crect fill='%23667eea' width='1200' height='630'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='64' font-weight='bold' fill='white' text-anchor='middle' dominant-baseline='middle'%3EMehedi Dev - Web Developer%3C/text%3E%3C/svg%3E">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mehedi Dev - Web Developer Portfolio">
+    <meta name="twitter:description" content="Professional Web Developer creating modern web applications">
+    
+    <title>Mehedi Dev - Web Developer Portfolio</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%23667eea' width='100' height='100'/%3E%3Ctext x='50' y='65' font-family='Arial' font-size='60' font-weight='bold' fill='white' text-anchor='middle'%3E%3C/text%3E%3Cpath d='M30 30 L50 50 L70 30 M50 50 L50 70' stroke='white' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+    <link rel="shortcut icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%23667eea' width='100' height='100'/%3E%3Cpath d='M30 30 L50 50 L70 30 M50 50 L50 70' stroke='white' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+    
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-DQSTJFGRKXMHKAEJODR6iDaqJqM+PtBj/pSXM92d5CXWL2eUhsB4b9KIGUt5+WEXzIVxl9rMuOzg9KBvJmXxCw==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="spinner"></div>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <div class="nav-brand">
                 <h1><i class="fas fa-code"></i> Mehedi Dev</h1>
             </div>
-            <ul class="nav-menu">
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
                 <li><a href="#home" class="nav-link active">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="stars"></div>
         <div class="container">
             <div class="hero-content">
-                <div class="hero-text">
-                    <h1 class="hero-title">আমি <span class="highlight">Mehedi Hasan</span></h1>
-                    <p class="hero-subtitle">Web Developer & JavaScript Programmer</p>
-                    <p class="hero-description">আমি আধুনিক এবং ব্যবহারকারী-বান্ধব ওয়েব অ্যাপ্লিকেশন তৈরিতে বিশেষজ্ঞ। আমার লক্ষ্য হল উচ্চমানের সফটওয়্যার সমাধান প্রদান করা।</p>
-                    <div class="hero-buttons">
-                        <a href="#projects" class="btn btn-primary">
-                            <i class="fas fa-rocket"></i> আমার কাজ দেখুন
-                        </a>
-                        <a href="#contact" class="btn btn-secondary">
-                            <i class="fas fa-paper-plane"></i> যোগাযোগ করুন
-                        </a>
-                    </div>
-                </div>
-                <div class="hero-animation">
-                    <div class="floating-card">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
+                <h1 class="hero-title">Hi, I'm <span class="highlight">Mehedi Hasan</span></h1>
+                <p class="hero-subtitle">Full Stack Web Developer</p>
+                <p class="hero-description">I create modern, responsive, and user-friendly web applications. Specialized in frontend development with HTML, CSS, and JavaScript.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
                 </div>
             </div>
         </div>
@@ -62,31 +77,23 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title">আমার সম্পর্কে</h2>
-            <div class="about-content">
-                <div class="about-image">
-                    <div class="image-wrapper">
-                        <div class="gradient-box"></div>
-                        <i class="fas fa-user-tie"></i>
-                    </div>
-                </div>
+            <h2 class="section-title">About Me</h2>
+            <div class="about-grid">
                 <div class="about-text">
-                    <h3>আমি কে?</h3>
-                    <p>আমি Mehedi Hasan, একজন উৎসাহী ওয়েব ডেভেলপার যিনি প্রযুক্তি এবং সৃজনশীলতায় বিশ্বাস করেন। আমি প্রতিদিন নতুন কিছু শিখছি এবং আমার দক্ষতা উন্নত করছি।</p>
-                    <p>আমার প্যাশন হল এমন ওয়েবসাইট এবং অ্যাপ্লিকেশন তৈরি করা যা মানুষের জীবনকে সহজ এবং আরও ভালো করে তোলে।</p>
-                    
-                    <div class="about-stats">
-                        <div class="stat-box">
-                            <div class="stat-number">5+</div>
-                            <div class="stat-label">প্রজেক্ট</div>
+                    <p>I'm a passionate web developer with a focus on creating elegant solutions to complex problems. With expertise in modern web technologies, I help businesses and individuals bring their ideas to life through innovative web applications.</p>
+                    <p>I believe in writing clean, maintainable code and delivering projects on time. My goal is to create digital experiences that are not just beautiful, but also functional and user-centric.</p>
+                    <div class="stats-grid">
+                        <div class="stat">
+                            <h3>5+</h3>
+                            <p>Projects</p>
                         </div>
-                        <div class="stat-box">
-                            <div class="stat-number">1+</div>
-                            <div class="stat-label">বছর অভিজ্ঞতা</div>
+                        <div class="stat">
+                            <h3>100%</h3>
+                            <p>Dedication</p>
                         </div>
-                        <div class="stat-box">
-                            <div class="stat-number">100%</div>
-                            <div class="stat-label">প্রতিশ্রুতিবদ্ধ</div>
+                        <div class="stat">
+                            <h3>Always</h3>
+                            <p>Learning</p>
                         </div>
                     </div>
                 </div>
@@ -97,113 +104,107 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title">আমার প্রজেক্ট</h2>
+            <h2 class="section-title">Featured Projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
-                    <div class="project-header">
-                        <i class="fas fa-globe"></i>
-                        <span class="project-badge">Featured</span>
+                    <div class="project-image">
+                        <i class="fas fa-laptop-code"></i>
                     </div>
                     <h3>Portfolio Website</h3>
-                    <p>একটি আধুনিক এবং রেসপন্সিভ পোর্টফোলিও ওয়েবসাইট যা আমার কাজ এবং দক্ষতা প্রদর্শন করে।</p>
-                    <div class="project-tags">
-                        <span class="tag">HTML5</span>
-                        <span class="tag">CSS3</span>
-                        <span class="tag">JavaScript</span>
+                    <p>A modern, responsive portfolio website showcasing my skills and projects.</p>
+                    <div class="project-tech">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
                     </div>
                     <div class="project-links">
-                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
-                        <a href="#" class="project-link"><i class="fas fa-code"></i> Code</a>
+                        <a href="#" class="link-btn"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        <a href="#" class="link-btn"><i class="fas fa-github"></i> Code</a>
                     </div>
                 </div>
 
                 <div class="project-card">
-                    <div class="project-header">
+                    <div class="project-image">
                         <i class="fas fa-shopping-cart"></i>
-                        <span class="project-badge">E-Commerce</span>
                     </div>
                     <h3>E-Commerce Platform</h3>
-                    <p>একটি সম্পূর্ণ ই-কমার্স প্ল্যাটফর্ম যেখানে পণ্য প্রদর্শন, শপিং কার্ট এবং চেকআউট সুবিধা রয়েছে।</p>
-                    <div class="project-tags">
-                        <span class="tag">HTML5</span>
-                        <span class="tag">CSS3</span>
-                        <span class="tag">JavaScript</span>
+                    <p>Complete e-commerce solution with product display and shopping cart functionality.</p>
+                    <div class="project-tech">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
                     </div>
                     <div class="project-links">
-                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
-                        <a href="#" class="project-link"><i class="fas fa-code"></i> Code</a>
+                        <a href="#" class="link-btn"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        <a href="#" class="link-btn"><i class="fas fa-github"></i> Code</a>
                     </div>
                 </div>
 
                 <div class="project-card">
-                    <div class="project-header">
-                        <i class="fas fa-list-check"></i>
-                        <span class="project-badge">Productivity</span>
+                    <div class="project-image">
+                        <i class="fas fa-tasks"></i>
                     </div>
                     <h3>Todo Application</h3>
-                    <p>একটি দ্রুত এবং সুবিধাজনক Todo অ্যাপ্লিকেশন যেখানে আপনার দৈনন্দিন কাজ ট্র্যাক করতে পারবেন।</p>
-                    <div class="project-tags">
-                        <span class="tag">HTML5</span>
-                        <span class="tag">CSS3</span>
-                        <span class="tag">JavaScript</span>
+                    <p>Efficient task management app with add, delete, and mark complete functionality.</p>
+                    <div class="project-tech">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
                     </div>
                     <div class="project-links">
-                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
-                        <a href="#" class="project-link"><i class="fas fa-code"></i> Code</a>
+                        <a href="#" class="link-btn"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        <a href="#" class="link-btn"><i class="fas fa-github"></i> Code</a>
                     </div>
                 </div>
 
                 <div class="project-card">
-                    <div class="project-header">
+                    <div class="project-image">
                         <i class="fas fa-calculator"></i>
-                        <span class="project-badge">Tool</span>
                     </div>
                     <h3>Advanced Calculator</h3>
-                    <p>একটি উন্নত ক্যালকুলেটর যা সব ধরনের গাণিতিক গণনা করতে পারে এবং সুন্দর ইন্টারফেস প্রদান করে।</p>
-                    <div class="project-tags">
-                        <span class="tag">HTML5</span>
-                        <span class="tag">CSS3</span>
-                        <span class="tag">JavaScript</span>
+                    <p>Feature-rich calculator with smooth UI and advanced mathematical operations.</p>
+                    <div class="project-tech">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
                     </div>
                     <div class="project-links">
-                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
-                        <a href="#" class="project-link"><i class="fas fa-code"></i> Code</a>
+                        <a href="#" class="link-btn"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        <a href="#" class="link-btn"><i class="fas fa-github"></i> Code</a>
                     </div>
                 </div>
 
                 <div class="project-card">
-                    <div class="project-header">
+                    <div class="project-image">
                         <i class="fas fa-cloud-sun"></i>
-                        <span class="project-badge">API</span>
                     </div>
                     <h3>Weather Application</h3>
-                    <p>একটি রিয়েল-টাইম আবহাওয়া অ্যাপ্লিকেশন যা বিশ্বের যেকোনো জায়গার আবহাওয়ার তথ্য দেখায়।</p>
-                    <div class="project-tags">
-                        <span class="tag">HTML5</span>
-                        <span class="tag">CSS3</span>
-                        <span class="tag">API</span>
+                    <p>Real-time weather app displaying current conditions and forecasts worldwide.</p>
+                    <div class="project-tech">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>API</span>
                     </div>
                     <div class="project-links">
-                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
-                        <a href="#" class="project-link"><i class="fas fa-code"></i> Code</a>
+                        <a href="#" class="link-btn"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        <a href="#" class="link-btn"><i class="fas fa-github"></i> Code</a>
                     </div>
                 </div>
 
                 <div class="project-card">
-                    <div class="project-header">
+                    <div class="project-image">
                         <i class="fas fa-film"></i>
-                        <span class="project-badge">Media</span>
                     </div>
                     <h3>Movie Database</h3>
-                    <p>একটি মুভি ডাটাবেস অ্যাপ্লিকেশন যেখানে হাজারো মুভির তথ্য খুঁজে পাওয়া যায়।</p>
-                    <div class="project-tags">
-                        <span class="tag">HTML5</span>
-                        <span class="tag">CSS3</span>
-                        <span class="tag">API</span>
+                    <p>Comprehensive movie database with search and filtering capabilities.</p>
+                    <div class="project-tech">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>API</span>
                     </div>
                     <div class="project-links">
-                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
-                        <a href="#" class="project-link"><i class="fas fa-code"></i> Code</a>
+                        <a href="#" class="link-btn"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        <a href="#" class="link-btn"><i class="fas fa-github"></i> Code</a>
                     </div>
                 </div>
             </div>
@@ -213,98 +214,37 @@
     <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
-            <h2 class="section-title">আমার দক্ষতা</h2>
-            <div class="skills-container">
-                <div class="skills-category">
-                    <h3 class="category-title"><i class="fas fa-code"></i> Frontend</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item">
-                            <div class="skill-icon html">
-                                <i class="fab fa-html5"></i>
-                            </div>
-                            <h4>HTML5</h4>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 95%"></div>
-                            </div>
-                            <span class="skill-percentage">95%</span>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon css">
-                                <i class="fab fa-css3-alt"></i>
-                            </div>
-                            <h4>CSS3</h4>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div>
-                            <span class="skill-percentage">90%</span>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon js">
-                                <i class="fab fa-js"></i>
-                            </div>
-                            <h4>JavaScript</h4>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
-                            </div>
-                            <span class="skill-percentage">85%</span>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon react">
-                                <i class="fab fa-react"></i>
-                            </div>
-                            <h4>React</h4>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 75%"></div>
-                            </div>
-                            <span class="skill-percentage">75%</span>
-                        </div>
-                    </div>
+            <h2 class="section-title">Skills & Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-box">
+                    <i class="fab fa-html5"></i>
+                    <h3>HTML5</h3>
+                    <p>Semantic markup and accessibility</p>
                 </div>
-
-                <div class="skills-category">
-                    <h3 class="category-title"><i class="fas fa-server"></i> Backend & Tools</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item">
-                            <div class="skill-icon node">
-                                <i class="fab fa-node"></i>
-                            </div>
-                            <h4>Node.js</h4>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%"></div>
-                            </div>
-                            <span class="skill-percentage">80%</span>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon git">
-                                <i class="fab fa-git-alt"></i>
-                            </div>
-                            <h4>Git</h4>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
-                            </div>
-                            <span class="skill-percentage">85%</span>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon npm">
-                                <i class="fab fa-npm"></i>
-                            </div>
-                            <h4>NPM</h4>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%"></div>
-                            </div>
-                            <span class="skill-percentage">80%</span>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon api">
-                                <i class="fas fa-cube"></i>
-                            </div>
-                            <h4>REST API</h4>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%"></div>
-                            </div>
-                            <span class="skill-percentage">80%</span>
-                        </div>
-                    </div>
+                <div class="skill-box">
+                    <i class="fab fa-css3-alt"></i>
+                    <h3>CSS3</h3>
+                    <p>Responsive design and animations</p>
+                </div>
+                <div class="skill-box">
+                    <i class="fab fa-js"></i>
+                    <h3>JavaScript</h3>
+                    <p>ES6+, DOM manipulation, APIs</p>
+                </div>
+                <div class="skill-box">
+                    <i class="fab fa-react"></i>
+                    <h3>React</h3>
+                    <p>Component-based development</p>
+                </div>
+                <div class="skill-box">
+                    <i class="fab fa-node"></i>
+                    <h3>Node.js</h3>
+                    <p>Backend development</p>
+                </div>
+                <div class="skill-box">
+                    <i class="fab fa-git-alt"></i>
+                    <h3>Git</h3>
+                    <p>Version control and collaboration</p>
                 </div>
             </div>
         </div>
@@ -313,28 +253,28 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">আমার সাথে যোগাযোগ করুন</h2>
+            <h2 class="section-title">Get In Touch</h2>
             <div class="contact-wrapper">
                 <div class="contact-info">
-                    <h3>আপনার বার্তা পাঠান</h3>
-                    <p>আমি সর্বদা নতুন সুযোগ এবং সহযোগিতার জন্য খোলা থাকি। আপনার যদি কোনো প্রশ্ন থাকে তবে নির্দ্বিধায় যোগাযোগ করুন!</p>
+                    <h3>Let's Work Together</h3>
+                    <p>I'm always interested in hearing about new projects and opportunities.</p>
                     
-                    <div class="contact-methods">
-                        <div class="contact-method">
+                    <div class="contact-items">
+                        <div class="contact-item">
                             <i class="fas fa-envelope"></i>
                             <div>
                                 <h4>Email</h4>
                                 <a href="mailto:your-email@example.com">your-email@example.com</a>
                             </div>
                         </div>
-                        <div class="contact-method">
+                        <div class="contact-item">
                             <i class="fas fa-phone"></i>
                             <div>
                                 <h4>Phone</h4>
                                 <a href="tel:+8801234567890">+880 1234 567890</a>
                             </div>
                         </div>
-                        <div class="contact-method">
+                        <div class="contact-item">
                             <i class="fas fa-map-marker-alt"></i>
                             <div>
                                 <h4>Location</h4>
@@ -343,44 +283,28 @@
                         </div>
                     </div>
 
-                    <div class="social-section">
-                        <h4>সোশ্যাল মিডিয়া</h4>
-                        <div class="social-links">
-                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" title="GitHub">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" title="LinkedIn">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" title="Facebook">
-                                <i class="fab fa-facebook"></i>
-                            </a>
-                            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" title="Twitter">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" title="Instagram">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                        </div>
+                    <div class="social-links">
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" title="Facebook"><i class="fab fa-facebook"></i></a>
                     </div>
                 </div>
 
-                <form class="contact-form" onsubmit="handleFormSubmit(event)">
+                <form class="contact-form" id="contactForm" novalidate>
                     <div class="form-group">
-                        <input type="text" placeholder="আপনার নাম" required>
+                        <input type="text" placeholder="Your Name" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" placeholder="আপনার ইমেইল" required>
+                        <input type="email" placeholder="Your Email" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" placeholder="বিষয়">
+                        <input type="text" placeholder="Subject">
                     </div>
                     <div class="form-group">
-                        <textarea placeholder="আপনার বার্তা" rows="5" required></textarea>
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">
-                        <i class="fas fa-send"></i> বার্তা পাঠান
-                    </button>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
                 </form>
             </div>
         </div>
@@ -389,15 +313,12 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 <span class="highlight">Mehedi Dev Journey</span>. সকল অধিকার সংরক্ষিত।</p>
-            <p class="footer-text">ডিজাইন এবং ডেভেলপড করেছি <span class="highlight">Mehedi Hasan</span> দ্বারা ♥</p>
+            <p>&copy; 2026 Mehedi Dev Journey. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- Scroll to top button -->
-    <button class="scroll-to-top" onclick="scrollToTop()">
-        <i class="fas fa-arrow-up"></i>
-    </button>
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></button>
 
     <script src="script.js"></script>
 </body>
