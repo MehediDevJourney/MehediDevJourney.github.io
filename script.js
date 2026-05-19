@@ -1,4 +1,21 @@
-// Hide loader after 2.5 seconds
+// Theme Toggle
+const themeToggle = document.getElementById('themeToggle');
+const body = document.body;
+
+const currentTheme = localStorage.getItem('theme') || 'light';
+if (currentTheme === 'dark') {
+    body.classList.add('dark-mode');
+    themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+}
+
+themeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    const theme = body.classList.contains('dark-mode') ? 'dark' : 'light';
+    localStorage.setItem('theme', theme);
+    themeToggle.innerHTML = theme === 'dark' ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+});
+
+// Loader
 window.addEventListener('load', () => {
     const loader = document.getElementById('loader');
     if (loader) {
@@ -66,7 +83,7 @@ const contactForm = document.getElementById('contactForm');
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        alert('Thank you! Your message has been sent successfully.');
+        alert('Thank you! Your message has been sent successfully. I will get back to you soon!');
         contactForm.reset();
     });
 }
@@ -80,4 +97,22 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             target.scrollIntoView({ behavior: 'smooth' });
         }
     });
+});
+
+// Add animation to elements on scroll
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -100px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.animation = 'slideUp 0.6s ease forwards';
+        }
+    });
+}, observerOptions);
+
+document.querySelectorAll('.service-card, .project-card, .blog-card').forEach(el => {
+    observer.observe(el);
 });
