@@ -3,39 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional Web Developer Portfolio - Build stunning web applications with modern technologies">
-    <meta name="keywords" content="web developer, portfolio, javascript, html, css, web development">
+    <meta name="description" content="Mehedi Hasan - Full Stack Web Developer | Create Beautiful Web Applications">
+    <meta name="keywords" content="web developer, portfolio, javascript, react, web design">
     <meta name="author" content="Mehedi Hasan">
     <meta name="theme-color" content="#667eea">
     
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Mehedi Dev - Web Developer Portfolio">
-    <meta property="og:description" content="Professional Web Developer creating modern, responsive web applications">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Mehedi Hasan - Web Developer Portfolio">
+    <meta property="og:description" content="Professional Web Developer creating stunning web applications">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://MehediDevJourney.github.io">
-    <meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630'%3E%3Crect fill='%23667eea' width='1200' height='630'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='64' font-weight='bold' fill='white' text-anchor='middle' dominant-baseline='middle'%3EMehedi Dev - Web Developer%3C/text%3E%3C/svg%3E">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
     
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Mehedi Dev - Web Developer Portfolio">
-    <meta name="twitter:description" content="Professional Web Developer creating modern web applications">
-    
-    <title>Mehedi Dev - Web Developer Portfolio</title>
+    <title>Mehedi Hasan - Full Stack Web Developer</title>
     
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%23667eea' width='100' height='100'/%3E%3Ctext x='50' y='65' font-family='Arial' font-size='60' font-weight='bold' fill='white' text-anchor='middle'%3E%3C/text%3E%3Cpath d='M30 30 L50 50 L70 30 M50 50 L50 70' stroke='white' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
-    <link rel="shortcut icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%23667eea' width='100' height='100'/%3E%3Cpath d='M30 30 L50 50 L70 30 M50 50 L50 70' stroke='white' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%23667eea' width='100' height='100'/%3E%3Ctext x='50' y='60' font-family='Arial' font-size='50' font-weight='bold' fill='white' text-anchor='middle'%3EMD%3C/text%3E%3C/svg%3E">
     
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-DQSTJFGRKXMHKAEJODR6iDaqJqM+PtBj/pSXM92d5CXWL2eUhsB4b9KIGUt5+WEXzIVxl9rMuOzg9KBvJmXxCw==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Loading Screen -->
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Loader -->
     <div class="loader" id="loader">
         <div class="spinner"></div>
+        <p>Loading...</p>
     </div>
 
     <!-- Navigation -->
@@ -52,8 +49,9 @@
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#home" class="nav-link active">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#blog" class="nav-link">Blog</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </div>
@@ -61,14 +59,25 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <div class="stars"></div>
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title">Hi, I'm <span class="highlight">Mehedi Hasan</span></h1>
-                <p class="hero-subtitle">Full Stack Web Developer</p>
-                <p class="hero-description">I create modern, responsive, and user-friendly web applications. Specialized in frontend development with HTML, CSS, and JavaScript.</p>
+                <h1 class="hero-title">Hi, I'm <span class="gradient-text">Mehedi Hasan</span></h1>
+                <p class="hero-subtitle">Full Stack Web Developer & Designer</p>
+                <p class="hero-description">I create beautiful, responsive, and high-performing web applications using modern technologies. Let's build something amazing together!</p>
                 <div class="hero-buttons">
                     <a href="#projects" class="btn btn-primary">View My Work</a>
                     <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="code-window">
+                    <div class="code-header">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <pre>&lt;div class="portfolio"&gt;<br>  &lt;h1&gt;Welcome&lt;/h1&gt;<br>  &lt;p&gt;Building Web Apps&lt;/p&gt;<br>&lt;/div&gt;</pre>
                 </div>
             </div>
         </div>
@@ -79,23 +88,84 @@
         <div class="container">
             <h2 class="section-title">About Me</h2>
             <div class="about-grid">
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                </div>
                 <div class="about-text">
-                    <p>I'm a passionate web developer with a focus on creating elegant solutions to complex problems. With expertise in modern web technologies, I help businesses and individuals bring their ideas to life through innovative web applications.</p>
-                    <p>I believe in writing clean, maintainable code and delivering projects on time. My goal is to create digital experiences that are not just beautiful, but also functional and user-centric.</p>
-                    <div class="stats-grid">
+                    <h3>I'm a Passionate Developer</h3>
+                    <p>With over 1+ years of experience in web development, I've worked on numerous projects ranging from simple websites to complex web applications. I'm passionate about writing clean, efficient code and creating intuitive user experiences.</p>
+                    <p>My journey in tech has taught me that the best solutions come from understanding the problem deeply and thinking creatively. I love learning new technologies and staying updated with industry trends.</p>
+                    <div class="about-stats">
                         <div class="stat">
-                            <h3>5+</h3>
+                            <h4>5+</h4>
                             <p>Projects</p>
                         </div>
                         <div class="stat">
-                            <h3>100%</h3>
-                            <p>Dedication</p>
+                            <h4>20+</h4>
+                            <p>Clients</p>
                         </div>
                         <div class="stat">
-                            <h3>Always</h3>
-                            <p>Learning</p>
+                            <h4>100%</h4>
+                            <p>Satisfied</p>
+                        </div>
+                        <div class="stat">
+                            <h4>24/7</h4>
+                            <p>Support</p>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Services I Offer</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>Build responsive, fast, and secure websites using modern technologies like HTML5, CSS3, and JavaScript.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>UI/UX Design</h3>
+                    <p>Create beautiful and intuitive user interfaces that enhance user experience and engagement.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Responsive Design</h3>
+                    <p>Ensure your website looks perfect on all devices - desktop, tablet, and mobile phones.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Performance Optimization</h3>
+                    <p>Optimize your website for speed and performance to improve user experience and SEO ranking.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>SEO Optimization</h3>
+                    <p>Improve your website's visibility in search engines and drive more organic traffic.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Technical Support</h3>
+                    <p>Get ongoing support and maintenance for your website to keep it running smoothly.</p>
                 </div>
             </div>
         </div>
@@ -108,34 +178,17 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-image">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <h3>Portfolio Website</h3>
-                    <p>A modern, responsive portfolio website showcasing my skills and projects.</p>
-                    <div class="project-tech">
-                        <span>HTML5</span>
-                        <span>CSS3</span>
-                        <span>JavaScript</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="link-btn"><i class="fas fa-external-link-alt"></i> Demo</a>
-                        <a href="#" class="link-btn"><i class="fas fa-github"></i> Code</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-shopping-cart"></i>
+                        <i class="fas fa-globe"></i>
                     </div>
                     <h3>E-Commerce Platform</h3>
-                    <p>Complete e-commerce solution with product display and shopping cart functionality.</p>
+                    <p>A full-featured e-commerce platform with product catalog, shopping cart, and payment integration.</p>
                     <div class="project-tech">
                         <span>HTML5</span>
                         <span>CSS3</span>
                         <span>JavaScript</span>
                     </div>
                     <div class="project-links">
-                        <a href="#" class="link-btn"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        <a href="#" class="link-btn"><i class="fas fa-external-link-alt"></i> Live</a>
                         <a href="#" class="link-btn"><i class="fas fa-github"></i> Code</a>
                     </div>
                 </div>
@@ -144,32 +197,15 @@
                     <div class="project-image">
                         <i class="fas fa-tasks"></i>
                     </div>
-                    <h3>Todo Application</h3>
-                    <p>Efficient task management app with add, delete, and mark complete functionality.</p>
+                    <h3>Task Management App</h3>
+                    <p>A collaborative task management application with real-time updates and team collaboration features.</p>
                     <div class="project-tech">
-                        <span>HTML5</span>
-                        <span>CSS3</span>
-                        <span>JavaScript</span>
+                        <span>React</span>
+                        <span>Node.js</span>
+                        <span>MongoDB</span>
                     </div>
                     <div class="project-links">
-                        <a href="#" class="link-btn"><i class="fas fa-external-link-alt"></i> Demo</a>
-                        <a href="#" class="link-btn"><i class="fas fa-github"></i> Code</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-calculator"></i>
-                    </div>
-                    <h3>Advanced Calculator</h3>
-                    <p>Feature-rich calculator with smooth UI and advanced mathematical operations.</p>
-                    <div class="project-tech">
-                        <span>HTML5</span>
-                        <span>CSS3</span>
-                        <span>JavaScript</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="link-btn"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        <a href="#" class="link-btn"><i class="fas fa-external-link-alt"></i> Live</a>
                         <a href="#" class="link-btn"><i class="fas fa-github"></i> Code</a>
                     </div>
                 </div>
@@ -178,15 +214,15 @@
                     <div class="project-image">
                         <i class="fas fa-cloud-sun"></i>
                     </div>
-                    <h3>Weather Application</h3>
-                    <p>Real-time weather app displaying current conditions and forecasts worldwide.</p>
+                    <h3>Weather Dashboard</h3>
+                    <p>Real-time weather application with detailed forecasts and weather alerts integration.</p>
                     <div class="project-tech">
                         <span>HTML5</span>
                         <span>CSS3</span>
-                        <span>API</span>
+                        <span>Weather API</span>
                     </div>
                     <div class="project-links">
-                        <a href="#" class="link-btn"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        <a href="#" class="link-btn"><i class="fas fa-external-link-alt"></i> Live</a>
                         <a href="#" class="link-btn"><i class="fas fa-github"></i> Code</a>
                     </div>
                 </div>
@@ -196,14 +232,48 @@
                         <i class="fas fa-film"></i>
                     </div>
                     <h3>Movie Database</h3>
-                    <p>Comprehensive movie database with search and filtering capabilities.</p>
+                    <p>Comprehensive movie database with search, filtering, and user ratings functionality.</p>
+                    <div class="project-tech">
+                        <span>React</span>
+                        <span>TMDB API</span>
+                        <span>CSS-in-JS</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="link-btn"><i class="fas fa-external-link-alt"></i> Live</a>
+                        <a href="#" class="link-btn"><i class="fas fa-github"></i> Code</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>Advanced Calculator</h3>
+                    <p>Scientific calculator with advanced mathematical operations and calculation history.</p>
                     <div class="project-tech">
                         <span>HTML5</span>
                         <span>CSS3</span>
-                        <span>API</span>
+                        <span>JavaScript</span>
                     </div>
                     <div class="project-links">
-                        <a href="#" class="link-btn"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        <a href="#" class="link-btn"><i class="fas fa-external-link-alt"></i> Live</a>
+                        <a href="#" class="link-btn"><i class="fas fa-github"></i> Code</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-image"></i>
+                    </div>
+                    <h3>Photo Gallery</h3>
+                    <p>Beautiful photo gallery with lazy loading, lightbox, and responsive image optimization.</p>
+                    <div class="project-tech">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="link-btn"><i class="fas fa-external-link-alt"></i> Live</a>
                         <a href="#" class="link-btn"><i class="fas fa-github"></i> Code</a>
                     </div>
                 </div>
@@ -211,40 +281,243 @@
         </div>
     </section>
 
+    <!-- Blog Section -->
+    <section id="blog" class="blog">
+        <div class="container">
+            <h2 class="section-title">Latest Blog Posts</h2>
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="blog-date">May 13, 2026</div>
+                    <h3>Getting Started with React</h3>
+                    <p>Learn the basics of React and how to build your first component. This comprehensive guide covers JSX, state, props, and hooks.</p>
+                    <div class="blog-meta">
+                        <span><i class="fas fa-user"></i> Mehedi Hasan</span>
+                        <span><i class="fas fa-clock"></i> 5 min read</span>
+                    </div>
+                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="blog-date">May 12, 2026</div>
+                    <h3>Responsive Web Design Tips</h3>
+                    <p>Master responsive web design with practical tips and tricks. Learn how to create websites that work perfectly on all devices.</p>
+                    <div class="blog-meta">
+                        <span><i class="fas fa-user"></i> Mehedi Hasan</span>
+                        <span><i class="fas fa-clock"></i> 7 min read</span>
+                    </div>
+                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="blog-date">May 11, 2026</div>
+                    <h3>Web Performance Optimization</h3>
+                    <p>Discover techniques to optimize your website for speed and performance. Improve user experience and SEO rankings.</p>
+                    <div class="blog-meta">
+                        <span><i class="fas fa-user"></i> Mehedi Hasan</span>
+                        <span><i class="fas fa-clock"></i> 6 min read</span>
+                    </div>
+                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <div class="blog-date">May 10, 2026</div>
+                    <h3>UI/UX Design Principles</h3>
+                    <p>Understand fundamental UI/UX design principles that will help you create better user interfaces and experiences.</p>
+                    <div class="blog-meta">
+                        <span><i class="fas fa-user"></i> Mehedi Hasan</span>
+                        <span><i class="fas fa-clock"></i> 8 min read</span>
+                    </div>
+                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Clients Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Mehedi is an exceptional developer. He delivered our project on time and exceeded our expectations. Highly recommended!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <h4>Sarah Johnson</h4>
+                            <p>CEO, Tech Startup</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Working with Mehedi was a pleasure. His attention to detail and problem-solving skills are impressive. Will definitely hire again!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <h4>John Smith</h4>
+                            <p>Marketing Manager</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"The website Mehedi built for us is absolutely stunning. His creativity and technical expertise are unmatched!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <h4>Emily Davis</h4>
+                            <p>Business Owner</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Skills Section -->
-    <section id="skills" class="skills">
+    <section class="skills">
         <div class="container">
             <h2 class="section-title">Skills & Expertise</h2>
-            <div class="skills-grid">
-                <div class="skill-box">
-                    <i class="fab fa-html5"></i>
-                    <h3>HTML5</h3>
-                    <p>Semantic markup and accessibility</p>
+            <div class="skills-wrapper">
+                <div class="skill-category">
+                    <h3>Frontend Development</h3>
+                    <div class="skills-list">
+                        <div class="skill">
+                            <div class="skill-name">HTML5</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                            <span class="skill-percent">95%</span>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">CSS3</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">JavaScript</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">React</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="skill-box">
-                    <i class="fab fa-css3-alt"></i>
-                    <h3>CSS3</h3>
-                    <p>Responsive design and animations</p>
+
+                <div class="skill-category">
+                    <h3>Backend Development</h3>
+                    <div class="skills-list">
+                        <div class="skill">
+                            <div class="skill-name">Node.js</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">Express.js</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                            <span class="skill-percent">75%</span>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">MongoDB</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">MySQL</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                            <span class="skill-percent">75%</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="skill-box">
-                    <i class="fab fa-js"></i>
-                    <h3>JavaScript</h3>
-                    <p>ES6+, DOM manipulation, APIs</p>
-                </div>
-                <div class="skill-box">
-                    <i class="fab fa-react"></i>
-                    <h3>React</h3>
-                    <p>Component-based development</p>
-                </div>
-                <div class="skill-box">
-                    <i class="fab fa-node"></i>
-                    <h3>Node.js</h3>
-                    <p>Backend development</p>
-                </div>
-                <div class="skill-box">
-                    <i class="fab fa-git-alt"></i>
-                    <h3>Git</h3>
-                    <p>Version control and collaboration</p>
+
+                <div class="skill-category">
+                    <h3>Tools & Technologies</h3>
+                    <div class="skills-list">
+                        <div class="skill">
+                            <div class="skill-name">Git & GitHub</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">Figma</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">REST API</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">SEO</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -257,7 +530,7 @@
             <div class="contact-wrapper">
                 <div class="contact-info">
                     <h3>Let's Work Together</h3>
-                    <p>I'm always interested in hearing about new projects and opportunities.</p>
+                    <p>I'm always interested in hearing about new projects and opportunities. Feel free to reach out!</p>
                     
                     <div class="contact-items">
                         <div class="contact-item">
@@ -284,14 +557,22 @@
                     </div>
 
                     <div class="social-links">
-                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" title="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" title="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" title="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
                     </div>
                 </div>
 
-                <form class="contact-form" id="contactForm" novalidate>
+                <form class="contact-form" id="contactForm">
                     <div class="form-group">
                         <input type="text" placeholder="Your Name" required>
                     </div>
@@ -313,12 +594,40 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Mehedi Dev Journey. All rights reserved.</p>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About</h4>
+                    <p>Full-stack developer passionate about creating amazing web experiences.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Web Development</a></li>
+                        <li><a href="#services">UI/UX Design</a></li>
+                        <li><a href="#services">Optimization</a></li>
+                        <li><a href="#services">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Mehedi Dev Journey. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
-    <!-- Scroll to Top Button -->
-    <button class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></button>
+    <!-- Scroll to Top -->
+    <button class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <script src="script.js"></script>
 </body>
