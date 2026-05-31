@@ -4,58 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mehedi Hasan | Aspiring Web Developer</title>
-    <!-- Relative Path Fix for GitHub Pages -->
+    <!-- Relative CSS Path -->
     <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts -->
+    <!-- Google Fonts: Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <!-- Font Awesome for Icons -->
+    <!-- Font Awesome 6 Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- Background Decorative Elements -->
-    <div class="blob-1"></div>
-    <div class="blob-2"></div>
+    <!-- Ambient Background Lighting Effects -->
+    <div class="bg-glow-1"></div>
+    <div class="bg-glow-2"></div>
 
     <!-- Navigation -->
     <nav>
-        <div class="container nav-flex">
-            <a href="#" class="logo">MH<span>.</span></a>
+        <div class="container nav-container">
+            <a href="#" class="logo">MEHEDI<span>.</span></a>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Work</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <a href="https://github.com" target="_blank" class="nav-btn">GitHub <i class="fab fa-github"></i></a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero section">
-        <div class="container hero-content">
-            <h4 class="reveal">Hello, world! I am</h4>
-            <h1 class="reveal">Mehedi Hasan</h1>
-            <h2 class="reveal">Aspiring Web Developer & Tech Enthusiast</h2>
-            <p class="reveal">Bridging the gap between <span>Honours Accounting</span> and <span>Modern Web Architecture</span>.</p>
-            <div class="hero-btns reveal">
-                <a href="#projects" class="btn btn-primary">View My Work</a>
-                <a href="#contact" class="btn btn-outline">Let's Talk</a>
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content reveal">
+                <span class="badge">Open for Collaborations</span>
+                <h1>Crafting Digital <br><span class="gradient-text">Masterpieces</span></h1>
+                <p>Accounting Student by degree, <strong>Web Architect</strong> by passion. I design and build high-performance, aesthetically pleasing digital experiences.</p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn-primary">Explore Work</a>
+                    <a href="#contact" class="btn-secondary">Get in Touch</a>
+                </div>
             </div>
         </div>
     </header>
 
     <!-- About Section -->
     <section id="about" class="section">
-        <div class="container grid-2">
-            <div class="about-text reveal">
-                <h3 class="section-title">The Journey</h3>
-                <p>I am currently an <strong>Honours 1st-year Accounting student</strong>. While my academic path involves numbers and finance, my heart beats for technology.</p>
-                <p>I am a self-taught learner who believes that discipline from the financial world combined with the creativity of coding can build extraordinary digital experiences. I am dedicated to mastering the modern web stack one line at a time.</p>
-            </div>
-            <div class="vision-box reveal">
-                <h3 class="section-title">The 5-Year Vision</h3>
-                <div class="glass-card">
-                    <p>My goal is to evolve into a <strong>Senior Software Developer</strong>. Within 5 years, I aim to master Full-Stack development, contribute to high-impact open-source projects, and help businesses scale through elegant AI-driven solutions.</p>
+        <div class="container">
+            <div class="glass-card about-grid reveal">
+                <div class="about-info">
+                    <h2 class="section-title">The Story</h2>
+                    <p>I am currently an <strong>Honours 1st-year Accounting student</strong>. While my academic background deals with numbers and finance, my heart belongs to the world of technology.</p>
+                    <p>I believe the precision required in accounting, combined with the logic of programming, allows me to build robust and efficient software. I am a self-taught developer committed to continuous growth.</p>
+                </div>
+                <div class="vision-box">
+                    <h3>5-Year Vision</h3>
+                    <ul class="vision-list">
+                        <li><i class="fas fa-check-circle"></i> Mastery in Full-Stack Web Architecture</li>
+                        <li><i class="fas fa-check-circle"></i> Contributing to Global Open-Source Projects</li>
+                        <li><i class="fas fa-check-circle"></i> Building AI-Integrated Enterprise Solutions</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -64,32 +70,32 @@
     <!-- Skills Section -->
     <section id="skills" class="section">
         <div class="container">
-            <h3 class="section-title reveal">My Arsenal</h3>
-            <div class="skills-grid">
-                <div class="skill-card reveal">
+            <h2 class="section-title text-center reveal">Technical Arsenal</h2>
+            <div class="skills-container">
+                <div class="skill-item reveal" title="Proficient">
                     <i class="fab fa-html5"></i>
                     <h4>HTML5</h4>
-                    <p>Proficient</p>
+                    <span>Proficient</span>
                 </div>
-                <div class="skill-card reveal">
+                <div class="skill-item reveal" title="Learning">
                     <i class="fab fa-css3-alt"></i>
                     <h4>CSS3</h4>
-                    <p>Learning / Intermediate</p>
+                    <span>Learning</span>
                 </div>
-                <div class="skill-card reveal">
-                    <i class="fab fa-github"></i>
-                    <h4>Git & GitHub</h4>
-                    <p>Version Control</p>
+                <div class="skill-item reveal">
+                    <i class="fab fa-git-alt"></i>
+                    <h4>Version Control</h4>
+                    <span>Git & GitHub</span>
                 </div>
-                <div class="skill-card reveal">
-                    <i class="fas fa-brain"></i>
+                <div class="skill-item reveal">
+                    <i class="fas fa-robot"></i>
+                    <h4>AI Engineering</h4>
+                    <span>Prompt Logic</span>
+                </div>
+                <div class="skill-item reveal">
+                    <i class="fas fa-microchip"></i>
                     <h4>AI Tooling</h4>
-                    <p>ChatGPT, Gemini, DeepSeek</p>
-                </div>
-                <div class="skill-card reveal">
-                    <i class="fas fa-terminal"></i>
-                    <h4>Prompt Engineering</h4>
-                    <p>Advanced Logic</p>
+                    <span>ChatGPT & Claude</span>
                 </div>
             </div>
         </div>
@@ -98,17 +104,34 @@
     <!-- Projects Section -->
     <section id="projects" class="section">
         <div class="container">
-            <h3 class="section-title reveal">Featured Project</h3>
-            <div class="project-showcase reveal">
-                <div class="project-glass">
-                    <div class="project-info">
-                        <span class="badge">Most Popular</span>
+            <h2 class="section-title reveal">Featured Projects</h2>
+            <div class="project-grid">
+                <!-- Project 1: Premium Workspace -->
+                <div class="project-card reveal">
+                    <div class="project-img" style="background-image: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1000');"></div>
+                    <div class="project-details">
+                        <span class="project-tag">Live Project</span>
                         <h3>Premium Workspace Startpage</h3>
-                        <p>A highly customized, fast, iOS-inspired browser dashboard. It features integrated AI shortcuts, a live weather widget, and a dynamic clock designed for maximum productivity and aesthetics.</p>
-                        <div class="tech-stack">
-                            <span>#HTML5</span> <span>#CSS3</span> <span>#JS</span> <span>#AI_Tools</span>
+                        <p>An iOS-inspired dashboard with a live weather API, AI shortcuts, and a dynamic clock for professional workflows.</p>
+                        <div class="tech-tags"><span>HTML5</span> <span>CSS3</span> <span>JS</span></div>
+                        <div class="project-links">
+                            <a href="https://devmehedi.pro.bd/personal-homepage/" target="_blank" class="live-link">Live Demo <i class="fas fa-external-link-alt"></i></a>
+                            <a href="https://github.com" target="_blank" class="git-link"><i class="fab fa-github"></i> Code</a>
                         </div>
-                        <a href="#" class="btn btn-primary">Live Demo <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <!-- Project 2: Current Portfolio -->
+                <div class="project-card reveal">
+                    <div class="project-img" style="background-image: url('https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=1000');"></div>
+                    <div class="project-details">
+                        <span class="project-tag">Active</span>
+                        <h3>Glassmorphic Portfolio</h3>
+                        <p>A premium developer portfolio showcasing high-end UI/UX designs, mesh gradients, and smooth scroll animations.</p>
+                        <div class="tech-tags"><span>UI/UX</span> <span>Responsive</span> <span>JS</span></div>
+                        <div class="project-links">
+                            <a href="#">Current Site <i class="fas fa-check"></i></a>
+                            <a href="https://github.com" target="_blank" class="git-link"><i class="fab fa-github"></i> Code</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -118,15 +141,17 @@
     <!-- Contact Section -->
     <section id="contact" class="section">
         <div class="container">
-            <div class="contact-card reveal">
-                <h3 class="section-title">Get In Touch</h3>
-                <p>Have a project in mind or just want to say hi?</p>
-                <a href="mailto:your-email@example.com" class="email-link">your-email@example.com</a>
-                
+            <div class="glass-card contact-wrapper reveal">
+                <h2 class="section-title">Let's Build Something Great</h2>
+                <p>Currently looking for new opportunities. My inbox is always open for project inquiries or tech discussions.</p>
+                <a href="mailto:hello@mehedihasan.com" class="main-email">hello@mehedihasan.com</a>
                 <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-telegram"></i></a>
-                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" target="_blank" title="Telegram"><i class="fab fa-telegram"></i></a>
+                    <a href="#" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" target="_blank" title="Twitter/X"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
@@ -135,11 +160,11 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; <span id="year"></span> Mehedi Hasan. Built with <i class="fas fa-heart"></i> & Caffeine.</p>
+            <p>&copy; <span id="year"></span> Mehedi Hasan. Designed with Passion.</p>
         </div>
     </footer>
 
-    <!-- Relative Path Fix for GitHub Pages -->
+    <!-- Relative Script Path -->
     <script src="script.js"></script>
 </body>
 </html>
