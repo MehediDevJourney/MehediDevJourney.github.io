@@ -3,130 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mehedi Hasan | Senior Portfolio</title>
-    
-    <!-- Premium Typography -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Core Stylesheet -->
+    <title>Mehedi Hasan | Aspiring Web Developer</title>
+    <!-- Relative Path Fix for GitHub Pages -->
     <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- Animated Mesh Gradient Background -->
-    <div class="mesh-gradient"></div>
+    <!-- Background Decorative Elements -->
+    <div class="blob-1"></div>
+    <div class="blob-2"></div>
 
-    <main class="wrapper">
-        
-        <!-- SECTION 1: VisionOS Hero Widget -->
-        <header class="hero-section reveal">
-            <div class="glass-panel hero-widget">
-                <div class="widget-header">
-                    <span id="greeting">Good Morning</span>
-                    <span class="status-pill"><span id="battery-icon">⚡</span> <span id="battery-level">88%</span></span>
-                </div>
-                <div class="widget-body">
-                    <h1 id="live-clock">00:00:00</h1>
-                    <p id="live-date">Monday, January 1</p>
-                </div>
-                <div class="widget-footer">
-                    <h2 class="name-title">Mehedi Hasan</h2>
-                    <p class="tagline">Crafting Digital Spaces</p>
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-flex">
+            <a href="#" class="logo">MH<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero section">
+        <div class="container hero-content">
+            <h4 class="reveal">Hello, world! I am</h4>
+            <h1 class="reveal">Mehedi Hasan</h1>
+            <h2 class="reveal">Aspiring Web Developer & Tech Enthusiast</h2>
+            <p class="reveal">Bridging the gap between <span>Honours Accounting</span> and <span>Modern Web Architecture</span>.</p>
+            <div class="hero-btns reveal">
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-outline">Let's Talk</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container grid-2">
+            <div class="about-text reveal">
+                <h3 class="section-title">The Journey</h3>
+                <p>I am currently an <strong>Honours 1st-year Accounting student</strong>. While my academic path involves numbers and finance, my heart beats for technology.</p>
+                <p>I am a self-taught learner who believes that discipline from the financial world combined with the creativity of coding can build extraordinary digital experiences. I am dedicated to mastering the modern web stack one line at a time.</p>
+            </div>
+            <div class="vision-box reveal">
+                <h3 class="section-title">The 5-Year Vision</h3>
+                <div class="glass-card">
+                    <p>My goal is to evolve into a <strong>Senior Software Developer</strong>. Within 5 years, I aim to master Full-Stack development, contribute to high-impact open-source projects, and help businesses scale through elegant AI-driven solutions.</p>
                 </div>
             </div>
-        </header>
+        </div>
+    </section>
 
-        <!-- SECTION 2: Spotlight Search Bar -->
-        <section class="search-container reveal">
-            <div class="spotlight-bar">
-                <i class="fas fa-search"></i>
-                <input type="text" id="typewriter-input" readonly>
-            </div>
-        </section>
-
-        <!-- SECTION 3: About (The Vision) -->
-        <section id="about" class="content-section reveal">
-            <div class="glass-panel about-card">
-                <h3>The Transition</h3>
-                <p>An <strong>Accounting student</strong> by day, a <strong>Web Architect</strong> by night. I am merging the precision of finance with the limitless creativity of code. My 5-year trajectory is set: mastering the full-stack landscape and pioneering AI-integrated interfaces.</p>
-            </div>
-        </section>
-
-        <!-- SECTION 4: Skills (Squircles) -->
-        <section id="skills" class="content-section reveal">
-            <h4 class="section-label">Tech Stack</h4>
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h3 class="section-title reveal">My Arsenal</h3>
             <div class="skills-grid">
-                <div class="squircle-skill">
-                    <div class="icon-box html5">
-                        <i class="fab fa-html5"></i>
-                    </div>
-                    <span>Proficient</span>
+                <div class="skill-card reveal">
+                    <i class="fab fa-html5"></i>
+                    <h4>HTML5</h4>
+                    <p>Proficient</p>
                 </div>
-                <div class="squircle-skill">
-                    <div class="icon-box css3">
-                        <i class="fab fa-css3-alt"></i>
-                    </div>
-                    <span>Learning</span>
+                <div class="skill-card reveal">
+                    <i class="fab fa-css3-alt"></i>
+                    <h4>CSS3</h4>
+                    <p>Learning / Intermediate</p>
                 </div>
-                <div class="squircle-skill">
-                    <div class="icon-box github">
-                        <i class="fab fa-github"></i>
-                    </div>
-                    <span>Mastery</span>
+                <div class="skill-card reveal">
+                    <i class="fab fa-github"></i>
+                    <h4>Git & GitHub</h4>
+                    <p>Version Control</p>
                 </div>
-                <div class="squircle-skill">
-                    <div class="icon-box ai">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <span>AI Tooling</span>
+                <div class="skill-card reveal">
+                    <i class="fas fa-brain"></i>
+                    <h4>AI Tooling</h4>
+                    <p>ChatGPT, Gemini, DeepSeek</p>
                 </div>
-            </div>
-        </section>
-
-        <!-- SECTION 5: Featured Project -->
-        <section id="projects" class="content-section reveal">
-            <h4 class="section-label">Featured Work</h4>
-            <div class="glass-panel project-card">
-                <div class="project-mockup">
-                    <div class="mockup-overlay">
-                        <i class="fas fa-expand-alt"></i>
-                    </div>
-                </div>
-                <div class="project-details">
-                    <h5>Premium Workspace Startpage</h5>
-                    <p>A VisionOS-inspired browser dashboard featuring live weather API integration, dynamic clock, and AI-powered workflow shortcuts. Built for extreme productivity.</p>
-                    <div class="project-tags">
-                        <span>JavaScript</span>
-                        <span>CSS-Glass</span>
-                        <span>API Integration</span>
-                    </div>
+                <div class="skill-card reveal">
+                    <i class="fas fa-terminal"></i>
+                    <h4>Prompt Engineering</h4>
+                    <p>Advanced Logic</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- SECTION 6: Vision 2030 -->
-        <section id="vision" class="content-section reveal">
-            <div class="vision-card glass-panel">
-                <h4>5-Year Vision</h4>
-                <p>To establish a leading-edge development studio that bridges the gap between traditional finance and modern decentralized web technologies.</p>
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h3 class="section-title reveal">Featured Project</h3>
+            <div class="project-showcase reveal">
+                <div class="project-glass">
+                    <div class="project-info">
+                        <span class="badge">Most Popular</span>
+                        <h3>Premium Workspace Startpage</h3>
+                        <p>A highly customized, fast, iOS-inspired browser dashboard. It features integrated AI shortcuts, a live weather widget, and a dynamic clock designed for maximum productivity and aesthetics.</p>
+                        <div class="tech-stack">
+                            <span>#HTML5</span> <span>#CSS3</span> <span>#JS</span> <span>#AI_Tools</span>
+                        </div>
+                        <a href="#" class="btn btn-primary">Live Demo <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- FOOTER: Contact Pills -->
-        <footer class="reveal">
-            <div class="contact-pills">
-                <a href="#" class="pill"><i class="fab fa-telegram"></i> Telegram</a>
-                <a href="#" class="pill"><i class="fab fa-facebook"></i> Facebook</a>
-                <a href="mailto:contact@mehedi.com" class="pill"><i class="fas fa-envelope"></i> Email</a>
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="contact-card reveal">
+                <h3 class="section-title">Get In Touch</h3>
+                <p>Have a project in mind or just want to say hi?</p>
+                <a href="mailto:your-email@example.com" class="email-link">your-email@example.com</a>
+                
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
             </div>
-        </footer>
+        </div>
+    </section>
 
-    </main>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="year"></span> Mehedi Hasan. Built with <i class="fas fa-heart"></i> & Caffeine.</p>
+        </div>
+    </footer>
 
-    <!-- Core Script -->
+    <!-- Relative Path Fix for GitHub Pages -->
     <script src="script.js"></script>
 </body>
 </html>
