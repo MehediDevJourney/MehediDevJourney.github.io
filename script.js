@@ -1,54 +1,56 @@
-/**
- * Mehedi Hasan Portfolio - Pure JavaScript Logic
- */
-
-// Scroll Reveal Observer
-const revealElements = () => {
-    const reveals = document.querySelectorAll(".reveal");
+document.addEventListener('DOMContentLoaded', () => {
     
-    reveals.forEach(element => {
-        const windowHeight = window.innerHeight;
-        const elementTop = element.getBoundingClientRect().top;
-        const revealPoint = 100;
-        
-        if (elementTop < windowHeight - revealPoint) {
-            element.classList.add("active");
-        }
+    // 1. Mobile Menu Toggle
+    const menuToggle = document.getElementById('mobile-menu');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        menuToggle.classList.toggle('is-active');
     });
-};
 
-// Update Copyright Year Automatically
-const updateYear = () => {
-    const yearEl = document.getElementById('year');
-    if (yearEl) {
-        yearEl.textContent = new Date().getFullYear();
-    }
-};
+    // 2. Scroll Reveal Animation
+    const observerOptions = {
+        threshold: 0.1
+    };
 
-// Smooth Scroll for Internal Links
-const initSmoothScroll = () => {
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    // 3. Dynamic Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // 4. Smooth Scroll for all links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            
-            if (targetElement) {
-                targetElement.scrollIntoView({
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
                     behavior: 'smooth'
                 });
+                // Close mobile menu if open
+                navLinks.classList.remove('active');
             }
         });
     });
-};
 
-// Event Listeners
-window.addEventListener("scroll", revealElements);
-window.addEventListener("load", () => {
-    revealElements();
-    updateYear();
-    initSmoothScroll();
+    // 5. Navbar Shrink on Scroll
+    window.addEventListener('scroll', () => {
+        const nav = document.querySelector('.glass-nav');
+        if (window.scrollY > 100) {
+            nav.style.padding = '0.5rem 1.5rem';
+            nav.style.width = '85%';
+        } else {
+            nav.style.padding = '0.8rem 2rem';
+            nav.style.width = '90%';
+        }
+    });
 });
-
-// Simple Console Brand
-console.log("%c Portfolio Built by Mehedi Hasan ", "background: #007aff; color: #fff; font-weight: bold; padding: 5px;");
