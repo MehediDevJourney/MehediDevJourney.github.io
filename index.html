@@ -3,137 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mehedi | Aspiring Web Developer</title>
-    <!-- Inter Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <title>Mehedi Hasan | Senior Portfolio</title>
     
+    <!-- Premium Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Background Ambient Glows -->
-    <div class="glow glow-1"></div>
-    <div class="glow glow-2"></div>
+    <!-- Animated Mesh Gradient Background -->
+    <div class="mesh-gradient"></div>
 
-    <!-- Navigation -->
-    <nav>
-        <div class="nav-container">
-            <a href="#" class="logo">M.</a>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#vision">Vision</a></li>
-            </ul>
-            <a href="#contact" class="btn-small">Contact</a>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <header class="hero">
-        <div class="container">
-            <h2 class="reveal">Hello, I'm</h2>
-            <h1 class="reveal">Mehedi</h1>
-            <p class="subtitle reveal">Aspiring Web Developer | Tech Enthusiast | AI Learner</p>
-            <div class="hero-btns reveal">
-                <a href="#contact" class="btn-primary">Contact Me</a>
-                <a href="#projects" class="btn-secondary">View Work</a>
+    <main class="wrapper">
+        
+        <!-- SECTION 1: VisionOS Hero Widget -->
+        <header class="hero-section reveal">
+            <div class="glass-panel hero-widget">
+                <div class="widget-header">
+                    <span id="greeting">Good Morning</span>
+                    <span class="status-pill"><span id="battery-icon">⚡</span> <span id="battery-level">88%</span></span>
+                </div>
+                <div class="widget-body">
+                    <h1 id="live-clock">00:00:00</h1>
+                    <p id="live-date">Monday, January 1</p>
+                </div>
+                <div class="widget-footer">
+                    <h2 class="name-title">Mehedi Hasan</h2>
+                    <p class="tagline">Crafting Digital Spaces</p>
+                </div>
             </div>
-        </div>
-    </header>
+        </header>
 
-    <!-- About Section -->
-    <section id="about" class="section">
-        <div class="container">
-            <div class="glass-card about-content reveal">
-                <h2 class="section-title">The Journey</h2>
-                <p>Currently navigating the world of <strong>Accounting</strong>, I found my true calling in the logic and creativity of programming. My transition from balance sheets to building web interfaces is driven by a deep-seated passion for technology.</p>
-                <p>I am a self-taught learner dedicated to mastering the modern web stack, blending academic discipline with a creative mindset to build digital solutions.</p>
+        <!-- SECTION 2: Spotlight Search Bar -->
+        <section class="search-container reveal">
+            <div class="spotlight-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" id="typewriter-input" readonly>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="section">
-        <div class="container">
-            <h2 class="section-title text-center">Tech Stack & Tools</h2>
+        <!-- SECTION 3: About (The Vision) -->
+        <section id="about" class="content-section reveal">
+            <div class="glass-panel about-card">
+                <h3>The Transition</h3>
+                <p>An <strong>Accounting student</strong> by day, a <strong>Web Architect</strong> by night. I am merging the precision of finance with the limitless creativity of code. My 5-year trajectory is set: mastering the full-stack landscape and pioneering AI-integrated interfaces.</p>
+            </div>
+        </section>
+
+        <!-- SECTION 4: Skills (Squircles) -->
+        <section id="skills" class="content-section reveal">
+            <h4 class="section-label">Tech Stack</h4>
             <div class="skills-grid">
-                <div class="skill-card glass-card reveal">
-                    <i class="fab fa-html5"></i>
-                    <h3>HTML5</h3>
-                    <p>Proficient</p>
-                </div>
-                <div class="skill-card glass-card reveal">
-                    <i class="fab fa-css3-alt"></i>
-                    <h3>CSS3</h3>
-                    <p>Intermediate</p>
-                </div>
-                <div class="skill-card glass-card reveal">
-                    <i class="fab fa-github"></i>
-                    <h3>Git & GitHub</h3>
-                    <p>Version Control</p>
-                </div>
-                <div class="skill-card glass-card reveal">
-                    <i class="fas fa-microchip"></i>
-                    <h3>AI Tooling</h3>
-                    <p>ChatGPT, Gemini, DeepSeek</p>
-                </div>
-                <div class="skill-card glass-card reveal">
-                    <i class="fas fa-terminal"></i>
-                    <h3>Prompt Engineering</h3>
-                    <p>Advanced</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-        <div class="container">
-            <h2 class="section-title">Featured Project</h2>
-            <div class="project-showcase glass-card reveal">
-                <div class="project-info">
-                    <span class="badge">Featured</span>
-                    <h3>Premium Workspace Startpage</h3>
-                    <p>A custom browser dashboard inspired by iOS/macOS aesthetics. Features include a live dynamic clock, weather/battery status widgets, and integrated AI shortcuts for a productivity-first workflow.</p>
-                    <div class="tags">
-                        <span>HTML5</span>
-                        <span>CSS3</span>
-                        <span>JavaScript</span>
+                <div class="squircle-skill">
+                    <div class="icon-box html5">
+                        <i class="fab fa-html5"></i>
                     </div>
-                    <a href="#" class="btn-secondary">View Project <i class="fas fa-arrow-right"></i></a>
+                    <span>Proficient</span>
+                </div>
+                <div class="squircle-skill">
+                    <div class="icon-box css3">
+                        <i class="fab fa-css3-alt"></i>
+                    </div>
+                    <span>Learning</span>
+                </div>
+                <div class="squircle-skill">
+                    <div class="icon-box github">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <span>Mastery</span>
+                </div>
+                <div class="squircle-skill">
+                    <div class="icon-box ai">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <span>AI Tooling</span>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Vision Section -->
-    <section id="vision" class="section">
-        <div class="container">
-            <div class="vision-card glass-card reveal">
-                <h2 class="section-title">The 5-Year Vision</h2>
-                <p>My goal is to evolve from an Accounting student into a <strong>Full-Stack Software Architect</strong>. Within the next 5 years, I aim to contribute to high-impact open-source projects and bridge the gap between financial systems and modern AI-driven web technologies.</p>
+        <!-- SECTION 5: Featured Project -->
+        <section id="projects" class="content-section reveal">
+            <h4 class="section-label">Featured Work</h4>
+            <div class="glass-panel project-card">
+                <div class="project-mockup">
+                    <div class="mockup-overlay">
+                        <i class="fas fa-expand-alt"></i>
+                    </div>
+                </div>
+                <div class="project-details">
+                    <h5>Premium Workspace Startpage</h5>
+                    <p>A VisionOS-inspired browser dashboard featuring live weather API integration, dynamic clock, and AI-powered workflow shortcuts. Built for extreme productivity.</p>
+                    <div class="project-tags">
+                        <span>JavaScript</span>
+                        <span>CSS-Glass</span>
+                        <span>API Integration</span>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <footer id="contact" class="section">
-        <div class="container text-center">
-            <h2 class="section-title">Let's Connect</h2>
-            <p>I'm always open to discussing tech, projects, or opportunities.</p>
-            <div class="social-links">
-                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-telegram-plane"></i></a>
-                <a href="https://github.com" class="social-icon"><i class="fab fa-github"></i></a>
-                <a href="mailto:hello@example.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+        <!-- SECTION 6: Vision 2030 -->
+        <section id="vision" class="content-section reveal">
+            <div class="vision-card glass-panel">
+                <h4>5-Year Vision</h4>
+                <p>To establish a leading-edge development studio that bridges the gap between traditional finance and modern decentralized web technologies.</p>
             </div>
-            <p class="copyright">&copy; 2024 Mehedi. Built with passion & AI.</p>
-        </div>
-    </footer>
+        </section>
 
+        <!-- FOOTER: Contact Pills -->
+        <footer class="reveal">
+            <div class="contact-pills">
+                <a href="#" class="pill"><i class="fab fa-telegram"></i> Telegram</a>
+                <a href="#" class="pill"><i class="fab fa-facebook"></i> Facebook</a>
+                <a href="mailto:contact@mehedi.com" class="pill"><i class="fas fa-envelope"></i> Email</a>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- Core Script -->
     <script src="script.js"></script>
 </body>
 </html>
