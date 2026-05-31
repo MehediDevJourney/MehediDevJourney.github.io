@@ -1,45 +1,70 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    // Intersection Observer for Reveal on Scroll
-    const observerOptions = {
-        threshold: 0.1
-    };
+    // 1. Live Clock & Greeting Logic
+    const updateClock = () => {
+        const now = new Date();
+        const hours = String(now.getHours()).padStart(2, '0');
+        const minutes = String(now.getMinutes()).padStart(2, '0');
+        const seconds = String(now.getSeconds()).padStart(2, '0');
+        
+        document.getElementById('live-clock').textContent = `${hours}:${minutes}:${seconds}`;
+        
+        // Dynamic Greeting
+        const greetingElement = document.getElementById('greeting');
+        if (hours < 12) greetingElement.textContent = "Good Morning";
+        else if (hours < 18) greetingElement.textContent = "Good Afternoon";
+        else greetingElement.textContent = "Good Evening";
 
+        // Date String
+        const options = { weekday: 'long', month: 'long', day: 'numeric' };
+        document.getElementById('live-date').textContent = now.toLocaleDateString('en-US', options);
+    };
+    setInterval(updateClock, 1000);
+    updateClock();
+
+    // 2. Spotlight Typewriter Effect
+    const input = document.getElementById('typewriter-input');
+    const phrases = ["Search the web...", "Ask ChatGPT...", "Vision 2030...", "Mastering CSS..."];
+    let phraseIdx = 0;
+    let charIdx = 0;
+    let isDeleting = false;
+
+    const type = () => {
+        const currentPhrase = phrases[phraseIdx];
+        if (isDeleting) {
+            input.placeholder = currentPhrase.substring(0, charIdx--);
+        } else {
+            input.placeholder = currentPhrase.substring(0, charIdx++);
+        }
+
+        if (!isDeleting && charIdx === currentPhrase.length) {
+            isDeleting = true;
+            setTimeout(type, 2000);
+        } else if (isDeleting && charIdx === 0) {
+            isDeleting = false;
+            phraseIdx = (phraseIdx + 1) % phrases.length;
+            setTimeout(type, 500);
+        } else {
+            setTimeout(type, isDeleting ? 50 : 100);
+        }
+    };
+    type();
+
+    // 3. Reveal on Scroll (Intersection Observer)
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('active');
             }
         });
-    }, observerOptions);
+    }, { threshold: 0.1 });
 
-    // Target all elements with class 'reveal'
-    document.querySelectorAll('.reveal').forEach((el) => {
-        observer.observe(el);
-    });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-    // Smooth scroll for nav links (Standard behavior enhanced)
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if(target) {
-                target.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-
-    // Simple Navbar background change on scroll
-    window.addEventListener('scroll', () => {
-        const nav = document.querySelector('nav');
-        if (window.scrollY > 50) {
-            nav.style.background = 'rgba(5, 5, 5, 0.9)';
-            nav.style.padding = '0.8rem 0';
-        } else {
-            nav.style.background = 'transparent';
-            nav.style.padding = '1.2rem 0';
-        }
-    });
+    // 4. Smooth Battery Mock (Visual only)
+    let battery = 88;
+    setInterval(() => {
+        battery = battery > 10 ? battery - 1 : 100;
+        document.getElementById('battery-level').textContent = `${battery}%`;
+    }, 60000);
 });
