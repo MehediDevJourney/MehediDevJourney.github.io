@@ -3,272 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mehedi Dev - Full Stack Developer</title>
-    <meta name="description" content="Full Stack Developer | Web Development | Software Engineer">
-    <meta name="theme-color" content="#1a1a2e">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Mehedi | Aspiring Web Developer</title>
+    <!-- Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- Background Ambient Glows -->
+    <div class="glow glow-1"></div>
+    <div class="glow glow-2"></div>
+
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-wrapper">
-                <div class="logo">
-                    <span class="logo-text">Mehedi<span class="logo-accent">.Dev</span></span>
-                </div>
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="#home" class="nav-link active">Home</a></li>
-                    <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#skills" class="nav-link">Skills</a></li>
-                    <li><a href="#projects" class="nav-link">Projects</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
-                </ul>
-                <div class="hamburger" id="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">M.</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#vision">Vision</a></li>
+            </ul>
+            <a href="#contact" class="btn-small">Contact</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
+    <header class="hero">
         <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1 class="hero-title">Hi, I'm <span class="gradient-text">Mehedi</span></h1>
-                    <p class="hero-subtitle">Full Stack Developer & Software Engineer</p>
-                    <p class="hero-description">
-                        Building beautiful and functional web applications with modern technologies. 
-                        Passionate about creating seamless user experiences and scalable backend solutions.
-                    </p>
-                    <div class="hero-buttons">
-                        <a href="#projects" class="btn btn-primary">View My Work</a>
-                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <div class="floating-card">
-                        <i class="fas fa-code"></i>
-                    </div>
-                </div>
+            <h2 class="reveal">Hello, I'm</h2>
+            <h1 class="reveal">Mehedi</h1>
+            <p class="subtitle reveal">Aspiring Web Developer | Tech Enthusiast | AI Learner</p>
+            <div class="hero-btns reveal">
+                <a href="#contact" class="btn-primary">Contact Me</a>
+                <a href="#projects" class="btn-secondary">View Work</a>
             </div>
         </div>
-    </section>
+    </header>
 
     <!-- About Section -->
-    <section id="about" class="about">
+    <section id="about" class="section">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        I'm a passionate developer with expertise in full-stack web development. 
-                        With a strong foundation in frontend and backend technologies, I create 
-                        applications that are not only visually appealing but also robust and scalable.
-                    </p>
-                    <p>
-                        I love solving complex problems, learning new technologies, and collaborating 
-                        with teams to build amazing products. When I'm not coding, you'll find me 
-                        exploring new tech trends or contributing to open-source projects.
-                    </p>
-                    <div class="about-stats">
-                        <div class="stat">
-                            <h3>50+</h3>
-                            <p>Projects Completed</p>
-                        </div>
-                        <div class="stat">
-                            <h3>30+</h3>
-                            <p>Happy Clients</p>
-                        </div>
-                        <div class="stat">
-                            <h3>3+</h3>
-                            <p>Years Experience</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="glass-card about-content reveal">
+                <h2 class="section-title">The Journey</h2>
+                <p>Currently navigating the world of <strong>Accounting</strong>, I found my true calling in the logic and creativity of programming. My transition from balance sheets to building web interfaces is driven by a deep-seated passion for technology.</p>
+                <p>I am a self-taught learner dedicated to mastering the modern web stack, blending academic discipline with a creative mindset to build digital solutions.</p>
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="skills">
+    <section id="skills" class="section">
         <div class="container">
-            <h2 class="section-title">Skills & Technologies</h2>
+            <h2 class="section-title text-center">Tech Stack & Tools</h2>
             <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Frontend</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">React</span>
-                        <span class="skill-tag">TypeScript</span>
-                        <span class="skill-tag">HTML/CSS</span>
-                        <span class="skill-tag">Tailwind CSS</span>
-                        <span class="skill-tag">Next.js</span>
-                    </div>
+                <div class="skill-card glass-card reveal">
+                    <i class="fab fa-html5"></i>
+                    <h3>HTML5</h3>
+                    <p>Proficient</p>
                 </div>
-                <div class="skill-category">
-                    <h3>Backend</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Node.js</span>
-                        <span class="skill-tag">Express</span>
-                        <span class="skill-tag">MongoDB</span>
-                        <span class="skill-tag">PostgreSQL</span>
-                        <span class="skill-tag">REST APIs</span>
-                        <span class="skill-tag">GraphQL</span>
-                    </div>
+                <div class="skill-card glass-card reveal">
+                    <i class="fab fa-css3-alt"></i>
+                    <h3>CSS3</h3>
+                    <p>Intermediate</p>
                 </div>
-                <div class="skill-category">
-                    <h3>Tools & Others</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Git</span>
-                        <span class="skill-tag">Docker</span>
-                        <span class="skill-tag">AWS</span>
-                        <span class="skill-tag">Firebase</span>
-                        <span class="skill-tag">Linux</span>
-                        <span class="skill-tag">Figma</span>
-                    </div>
+                <div class="skill-card glass-card reveal">
+                    <i class="fab fa-github"></i>
+                    <h3>Git & GitHub</h3>
+                    <p>Version Control</p>
+                </div>
+                <div class="skill-card glass-card reveal">
+                    <i class="fas fa-microchip"></i>
+                    <h3>AI Tooling</h3>
+                    <p>ChatGPT, Gemini, DeepSeek</p>
+                </div>
+                <div class="skill-card glass-card reveal">
+                    <i class="fas fa-terminal"></i>
+                    <h3>Prompt Engineering</h3>
+                    <p>Advanced</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects">
+    <section id="projects" class="section">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-shopping-cart"></i>
+            <h2 class="section-title">Featured Project</h2>
+            <div class="project-showcase glass-card reveal">
+                <div class="project-info">
+                    <span class="badge">Featured</span>
+                    <h3>Premium Workspace Startpage</h3>
+                    <p>A custom browser dashboard inspired by iOS/macOS aesthetics. Features include a live dynamic clock, weather/battery status widgets, and integrated AI shortcuts for a productivity-first workflow.</p>
+                    <div class="tags">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
                     </div>
-                    <div class="project-content">
-                        <h3>E-Commerce Platform</h3>
-                        <p>A full-stack e-commerce solution with payment integration, user authentication, and admin dashboard.</p>
-                        <div class="project-tech">
-                            <span>React</span>
-                            <span>Node.js</span>
-                            <span>MongoDB</span>
-                        </div>
-                        <a href="https://github.com/MehediDevJourney" target="_blank" class="project-link">
-                            View Project <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-tasks"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Task Management App</h3>
-                        <p>A collaborative task management tool with real-time updates, team collaboration, and progress tracking.</p>
-                        <div class="project-tech">
-                            <span>Next.js</span>
-                            <span>Firebase</span>
-                            <span>TypeScript</span>
-                        </div>
-                        <a href="https://github.com/MehediDevJourney" target="_blank" class="project-link">
-                            View Project <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Analytics Dashboard</h3>
-                        <p>Interactive analytics dashboard with real-time data visualization, charts, and comprehensive reporting.</p>
-                        <div class="project-tech">
-                            <span>React</span>
-                            <span>Express</span>
-                            <span>PostgreSQL</span>
-                        </div>
-                        <a href="https://github.com/MehediDevJourney" target="_blank" class="project-link">
-                            View Project <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
+                    <a href="#" class="btn-secondary">View Project <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
-            <div class="view-more">
-                <a href="https://github.com/MehediDevJourney" target="_blank" class="btn btn-primary">
-                    View All Projects on GitHub
-                </a>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section id="vision" class="section">
+        <div class="container">
+            <div class="vision-card glass-card reveal">
+                <h2 class="section-title">The 5-Year Vision</h2>
+                <p>My goal is to evolve from an Accounting student into a <strong>Full-Stack Software Architect</strong>. Within the next 5 years, I aim to contribute to high-impact open-source projects and bridge the gap between financial systems and modern AI-driven web technologies.</p>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <p class="contact-subtitle">I'm always interested in hearing about new projects and opportunities.</p>
-            
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h3>Email</h3>
-                            <a href="mailto:mehedi@example.com">mehedi@example.com</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h3>Phone</h3>
-                            <a href="tel:+8801234567890">+880 1234 567 890</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h3>Location</h3>
-                            <p>Bangladesh</p>
-                        </div>
-                    </div>
-                </div>
-
-                <form class="contact-form" id="contactForm">
-                    <div class="form-group">
-                        <input type="text" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea placeholder="Your Message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
+    <footer id="contact" class="section">
+        <div class="container text-center">
+            <h2 class="section-title">Let's Connect</h2>
+            <p>I'm always open to discussing tech, projects, or opportunities.</p>
+            <div class="social-links">
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-telegram-plane"></i></a>
+                <a href="https://github.com" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="mailto:hello@example.com" class="social-icon"><i class="fas fa-envelope"></i></a>
             </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <p>&copy; 2026 Mehedi Dev. All rights reserved.</p>
-                <div class="social-links">
-                    <a href="https://github.com/MehediDevJourney" target="_blank" title="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://linkedin.com" target="_blank" title="LinkedIn">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://twitter.com" target="_blank" title="Twitter">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                </div>
-            </div>
+            <p class="copyright">&copy; 2024 Mehedi. Built with passion & AI.</p>
         </div>
     </footer>
 
